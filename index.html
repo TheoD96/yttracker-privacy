@@ -39,7 +39,7 @@
   <p>All data is stored exclusively in your browser using the <code>chrome.storage.local</code> API. It never leaves your device. No servers, no accounts, no third-party services are involved.</p>
 
   <h2>What data is shared</h2>
-  <p>None. No data is transmitted anywhere.</p>
+  <p>No personal data is shared with any third parties. To look up a video's title, the extension makes a request to YouTube's public oEmbed API (<code>youtube.com/oembed</code>) using only the video ID from the URL you are already visiting. No account information, browsing history, or stored data is included in this request.</p>
 
   <h2>How to delete your data</h2>
   <p>Click the extension icon and use the "Clear all data" button at the bottom of the popup. This permanently removes all stored watch history from your device.</p>
@@ -48,7 +48,8 @@
   <p>The extension requests the following permissions:</p>
   <ul>
     <li><strong>storage</strong> — to save your watch history locally on your device.</li>
-    <li><strong>youtube.com host access</strong> — to detect when you navigate to a video or Short.</li>
+    <li><strong>scripting</strong> — to re-inject the tracking script into YouTube tabs that were open before the extension loaded.</li>
+    <li><strong>youtube.com host access</strong> — to detect when you navigate to a video or Short, and to fetch video titles via YouTube's oEmbed API.</li>
   </ul>
 
   <h2>Contact</h2>
