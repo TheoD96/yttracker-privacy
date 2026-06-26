@@ -36,10 +36,15 @@
   </ul>
 
   <h2>Where data is stored</h2>
-  <p>All data is stored exclusively in your browser using the <code>chrome.storage.local</code> API. It never leaves your device. No servers, no accounts, no third-party services are involved.</p>
+  <p>Your watch history is stored exclusively in your browser using the <code>chrome.storage.local</code> API. It is never uploaded to any server, and no accounts, analytics, or third-party services are involved.</p>
 
   <h2>What data is shared</h2>
-  <p>No personal data is shared with any third parties. To look up a video's title, the extension makes a request to YouTube's public oEmbed API (<code>youtube.com/oembed</code>) using only the video ID from the URL you are already visiting. No account information, browsing history, or stored data is included in this request.</p>
+  <p>No personal data is shared with any third parties. The extension makes requests only to YouTube itself, for two things:</p>
+  <ul>
+    <li>Looking up a video's title via YouTube's public oEmbed API (<code>youtube.com/oembed</code>).</li>
+    <li>Loading video thumbnails from YouTube's image servers (<code>i.ytimg.com</code>) to display them in the popup.</li>
+  </ul>
+  <p>Both requests include only the video ID of a video you are already watching on YouTube. No account information, browsing history, or stored watch data is included in these requests.</p>
 
   <h2>How to delete your data</h2>
   <p>Click the extension icon and use the "Clear all data" button at the bottom of the popup. This permanently removes all stored watch history from your device.</p>
