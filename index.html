@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="icon.png" />
-  <title>Privacy Policy — YT Watch Tracker</title>
+  <title>Privacy Policy — Watch Tracker for YouTube</title>
   <style>
     body {
       max-width: 640px;
@@ -25,7 +24,7 @@
   <h1>Privacy Policy</h1>
   <p><small>Last updated: June 2026</small></p>
 
-  <p>YT Watch Tracker is a Chrome browser extension that counts the YouTube videos and Shorts you watch each day.</p>
+  <p>Watch Tracker for YouTube is a Chrome browser extension that counts the YouTube videos and Shorts you watch each day.</p>
 
   <h2>What data is collected</h2>
   <p>The extension records the following for each video you navigate to on YouTube:</p>
@@ -36,15 +35,15 @@
   </ul>
 
   <h2>Where data is stored</h2>
-  <p>Your watch history is stored exclusively in your browser using the <code>chrome.storage.local</code> API. It is never uploaded to any server, and no accounts, analytics, or third-party services are involved.</p>
+  <p>Your watch history is stored exclusively in your browser using the <code>chrome.storage.local</code> API. It is never uploaded to us, and there are no servers, accounts, or analytics of any kind.</p>
 
-  <h2>What data is shared</h2>
-  <p>No personal data is shared with any third parties. The extension makes requests only to YouTube itself, for two things:</p>
+  <h2>Network requests</h2>
+  <p>The extension talks to YouTube itself — and only YouTube — for two things:</p>
   <ul>
-    <li>Looking up a video's title via YouTube's public oEmbed API (<code>youtube.com/oembed</code>).</li>
-    <li>Loading video thumbnails from YouTube's image servers (<code>i.ytimg.com</code>) to display them in the popup.</li>
+    <li>Fetching each video's title from YouTube's public oEmbed endpoint (<code>youtube.com/oembed</code>).</li>
+    <li>Loading video thumbnails from YouTube's image servers (<code>i.ytimg.com</code>) to display in the popup.</li>
   </ul>
-  <p>Both requests include only the video ID of a video you are already watching on YouTube. No account information, browsing history, or stored watch data is included in these requests.</p>
+  <p>These requests send only the video ID of a video you are already watching on YouTube. No data is sent to the developer or to any third-party service, and your watch history itself is never transmitted anywhere.</p>
 
   <h2>How to delete your data</h2>
   <p>Click the extension icon and use the "Clear all data" button at the bottom of the popup. This permanently removes all stored watch history from your device.</p>
@@ -53,8 +52,8 @@
   <p>The extension requests the following permissions:</p>
   <ul>
     <li><strong>storage</strong> — to save your watch history locally on your device.</li>
-    <li><strong>scripting</strong> — to re-inject the tracking script into YouTube tabs that were open before the extension loaded.</li>
-    <li><strong>youtube.com host access</strong> — to detect when you navigate to a video or Short, and to fetch video titles via YouTube's oEmbed API.</li>
+    <li><strong>scripting</strong> — to start tracking in YouTube tabs that were already open when the extension was installed or updated, so you don't have to reload them.</li>
+    <li><strong>youtube.com host access</strong> — to detect when you navigate to a video or Short.</li>
   </ul>
 
   <h2>Contact</h2>
